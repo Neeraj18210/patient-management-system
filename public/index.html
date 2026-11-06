@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f5f0">
+  <title>Overview | Neeraj Patient Management</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body data-page="overview">
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="/" aria-label="Neeraj Patient Management home"><span class="brand-mark"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 5v22M5 16h22"/><circle cx="16" cy="16" r="12"/></svg></span><span class="brand-name">NEERAJ <span>PATIENT MANAGEMENT</span></span></a>
+      <div class="workspace-label">WORKSPACE</div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="nav-link active" href="/" aria-current="page"><span class="nav-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="5" rx="1"/><rect x="13" y="10" width="8" height="11" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/></svg></span>Overview</a>
+        <a class="nav-link" href="/patients.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.4-3.4 2.7-5.3 6.5-5.3s6.1 1.9 6.5 5.3M17 11a3 3 0 1 0-.1-6M17 15c2.9.1 4.4 1.8 4.5 4.5"/></svg></span>Patient records<span class="nav-count" data-record-count>0</span></a>
+        <a class="nav-link" href="/insights.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M4 19V5M4 19h17M8 15l4-5 3 2 5-7"/></svg></span>Data insights</a>
+      </nav>
+      <div class="sidebar-bottom"><div class="sidebar-rule"></div><div class="clinic-card"><div class="clinic-avatar">NP</div><div class="clinic-info"><strong>Neeraj Clinic</strong><span>Patient management</span></div><span class="online-indicator" title="Local workspace"></span></div><div class="demo-note"><span class="demo-dot"></span>Local workspace</div></div>
+    </aside>
+    <main class="main-content">
+      <header class="topbar"><button class="mobile-menu icon-button" aria-label="Open navigation" aria-expanded="false"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button><div class="breadcrumbs"><span>Workspace</span><span class="crumb-slash">/</span><strong>Overview</strong></div><div class="topbar-actions"><div class="connection-label"><span class="connection-dot" data-connection-dot></span><span data-connection-label>Checking database</span></div><div class="topbar-divider"></div><div class="user-avatar" title="Neeraj Patient Management">NP</div></div></header>
+      <div class="page-wrap">
+        <section class="page-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span><span id="date-label">PATIENT CARE, AT A GLANCE</span></div><h1>Good day, <span>Neeraj.</span></h1><p class="page-subtitle">A clear view of your patient records and clinic data.</p></div><a class="button button-primary" href="/patients.html#new-record"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>Add patient record</a></section>
+        <section class="notice-bar" data-database-notice hidden><span class="notice-icon"><svg viewBox="0 0 24 24"><path d="M12 9v4m0 4h.01M10.3 3.9 2.8 17a2 2 0 0 0 1.7 3h15a2 2 0 0 0 1.7-3l-7.5-13.1a2 2 0 0 0-3.4 0Z"/></svg></span><span><strong>Database connection needed</strong><span data-database-message>Check the MySQL settings in your .env file.</span></span><a href="/patients.html">Connection setup <span>→</span></a></section>
+        <section class="metrics-grid" aria-label="Patient database summary"><article class="metric-card metric-patients"><div class="metric-top"><span class="metric-label">Patient records</span><span class="metric-icon icon-green"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.4-3.4 2.7-5.3 6.5-5.3s6.1 1.9 6.5 5.3M17 11a3 3 0 1 0-.1-6M17 15c2.9.1 4.4 1.8 4.5 4.5"/></svg></span></div><div class="metric-value" data-total-records>—</div><div class="metric-foot"><span class="metric-change"><svg viewBox="0 0 16 16"><path d="m3 10 4-4 3 3 4-5M10 4h4v4"/></svg>MySQL database</span><span>details_table</span></div></article><article class="metric-card metric-today"><div class="metric-top"><span class="metric-label">Database status</span><span class="metric-icon icon-orange"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8.5" ry="3"/><path d="M3.5 5v7c0 1.7 3.8 3 8.5 3 .8 0 1.6 0 2.3-.1M3.5 12v7c0 1.7 3.8 3 8.5 3 1.2 0 2.3-.1 3.3-.3M20.5 14v7m-3.5-3.5h7"/></svg></span></div><div class="metric-value metric-status" data-db-status>Checking</div><div class="metric-foot"><span class="metric-change warm-change"><span class="tiny-clock">⌁</span><span data-db-name>patient_management</span></span><span>database</span></div></article><article class="metric-card metric-arrivals"><div class="metric-top"><span class="metric-label">Table fields</span><span class="metric-icon icon-blue"><svg viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16M9 3v4m6 3v4m-6 3v4"/></svg></span></div><div class="metric-value" data-column-count>—</div><div class="metric-foot"><span class="metric-change blue-change"><span data-primary-key>Schema detected</span></span><span>columns</span></div></article><article class="metric-card metric-completed"><div class="metric-top"><span class="metric-label">Latest record</span><span class="metric-icon icon-lavender"><svg viewBox="0 0 24 24"><path d="M8 3h6l5 5v13H5V3h3ZM13 3v6h6M8 14h8M8 17h5"/></svg></span></div><div class="metric-value metric-latest" data-latest-record>—</div><div class="metric-foot"><span class="metric-change violet-change"><span>Most recently added</span></span><span>record</span></div></article></section>
+        <section class="dashboard-grid"><article class="panel schedule-panel"><div class="panel-heading"><div><div class="panel-kicker">DATABASE TABLE</div><h2>Recent patient records</h2></div><a class="text-link" href="/patients.html">View all<svg viewBox="0 0 16 16"><path d="M3 8h10M8 3l5 5-5 5"/></svg></a></div><div class="table-wrap dashboard-table-wrap"><table class="data-table dashboard-table"><thead data-dashboard-head></thead><tbody data-dashboard-records><tr><td class="loading-row">Connecting to MySQL...</td></tr></tbody></table></div><div class="schedule-footer"><span class="schedule-footer-mark"><svg viewBox="0 0 24 24"><path d="M12 7v5l3 2M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg></span><span><strong>Live from your database</strong><span> Records are read directly from details_table.</span></span></div></article><article class="panel roster-panel"><div class="panel-heading"><div><div class="panel-kicker">YOUR DATABASE</div><h2>Table details</h2></div><span class="table-chip">MYSQL</span></div><div class="schema-summary" data-schema-summary><div class="loading-row">Loading table schema...</div></div><a class="roster-cta" href="/patients.html#new-record"><span class="roster-cta-icon"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span><span><strong>Add a patient</strong><small>Save a new database row</small></span><svg class="cta-arrow" viewBox="0 0 16 16"><path d="M3 8h10M8 3l5 5-5 5"/></svg></a></article></section>
+        <footer class="page-footer"><span>NEERAJ PATIENT MANAGEMENT SYSTEM</span><span>Patient records <span class="footer-separator">·</span> MySQL workspace</span></footer>
+      </div>
+    </main>
+  </div>
+  <div class="toast-region" aria-live="polite" aria-atomic="true"></div>
+  <script src="/app.js" defer></script>
+</body>
+</html>

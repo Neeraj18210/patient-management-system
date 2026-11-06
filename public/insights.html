@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f5f0">
+  <title>Data insights | Neeraj Patient Management</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body data-page="insights">
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="/" aria-label="Neeraj Patient Management home"><span class="brand-mark"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 5v22M5 16h22"/><circle cx="16" cy="16" r="12"/></svg></span><span class="brand-name">NEERAJ <span>PATIENT MANAGEMENT</span></span></a>
+      <div class="workspace-label">WORKSPACE</div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="nav-link" href="/"><span class="nav-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="5" rx="1"/><rect x="13" y="10" width="8" height="11" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/></svg></span>Overview</a>
+        <a class="nav-link" href="/patients.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.4-3.4 2.7-5.3 6.5-5.3s6.1 1.9 6.5 5.3M17 11a3 3 0 1 0-.1-6M17 15c2.9.1 4.4 1.8 4.5 4.5"/></svg></span>Patient records<span class="nav-count" data-record-count>0</span></a>
+        <a class="nav-link active" href="/insights.html" aria-current="page"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M4 19V5M4 19h17M8 15l4-5 3 2 5-7"/></svg></span>Data insights</a>
+      </nav>
+      <div class="sidebar-bottom"><div class="sidebar-rule"></div><div class="clinic-card"><div class="clinic-avatar">NP</div><div class="clinic-info"><strong>Neeraj Clinic</strong><span>Patient management</span></div><span class="online-indicator" title="Local workspace"></span></div><div class="demo-note"><span class="demo-dot"></span>Local workspace</div></div>
+    </aside>
+    <main class="main-content">
+      <header class="topbar"><button class="mobile-menu icon-button" aria-label="Open navigation" aria-expanded="false"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button><div class="breadcrumbs"><a href="/">Workspace</a><span class="crumb-slash">/</span><strong>Data insights</strong></div><div class="topbar-actions"><div class="connection-label"><span class="connection-dot" data-connection-dot></span><span data-connection-label>Checking database</span></div><div class="topbar-divider"></div><div class="user-avatar" title="Neeraj Patient Management">NP</div></div></header>
+      <div class="page-wrap">
+        <section class="page-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span><span>YOUR PATIENT DATABASE</span></div><h1>Data <span>insights.</span></h1><p class="page-subtitle">A live snapshot of the fields and records in your MySQL table.</p></div><a class="button button-secondary" href="/patients.html"><svg viewBox="0 0 24 24"><path d="M15 18 9 12l6-6M9 12h12"/></svg>Back to records</a></section>
+        <section class="metrics-grid insight-metrics"><article class="metric-card metric-patients"><div class="metric-top"><span class="metric-label">Total records</span><span class="metric-icon icon-green"><svg viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16M9 3v4m6 3v4m-6 3v4"/></svg></span></div><div class="metric-value" data-total-records>—</div><div class="metric-foot"><span class="metric-change">Patient entries</span><span>in this table</span></div></article><article class="metric-card metric-today"><div class="metric-top"><span class="metric-label">Columns</span><span class="metric-icon icon-orange"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 9v11M15 9v11"/></svg></span></div><div class="metric-value" data-column-count>—</div><div class="metric-foot"><span class="metric-change warm-change">Detected from</span><span>details_table</span></div></article><article class="metric-card metric-arrivals"><div class="metric-top"><span class="metric-label">Primary key</span><span class="metric-icon icon-blue"><svg viewBox="0 0 24 24"><circle cx="8" cy="15.5" r="4.5"/><path d="m11.3 12.2 8.2-8.2 2.7 2.7-2 2-1.5-1.5-2 2 1.5 1.5-2 2-1.5-1.5"/></svg></span></div><div class="metric-value metric-latest" data-primary-key>—</div><div class="metric-foot"><span class="metric-change blue-change">Row identifier</span><span>for editing</span></div></article><article class="metric-card metric-completed"><div class="metric-top"><span class="metric-label">Connection</span><span class="metric-icon icon-lavender"><svg viewBox="0 0 24 24"><path d="M5 12.5 9.3 17 19 7"/><circle cx="12" cy="12" r="9"/></svg></span></div><div class="metric-value metric-status" data-db-status>Checking</div><div class="metric-foot"><span class="metric-change violet-change">MySQL</span><span data-db-name>patient_management</span></div></article></section>
+        <section class="insights-grid"><article class="panel field-panel"><div class="panel-heading"><div><div class="panel-kicker">SCHEMA OVERVIEW</div><h2>Table fields</h2></div><span class="table-chip">DETAILS_TABLE</span></div><div class="field-list" data-field-list><div class="loading-row">Reading the MySQL schema...</div></div></article><article class="panel distribution-panel"><div class="panel-heading"><div><div class="panel-kicker">DATA PROFILE</div><h2>Field types</h2></div></div><div class="type-distribution" data-type-distribution><div class="loading-row">Preparing field summary...</div></div></article></section>
+        <footer class="page-footer"><span>NEERAJ PATIENT MANAGEMENT SYSTEM</span><span>Schema overview <span class="footer-separator">·</span> Live MySQL data</span></footer>
+      </div>
+    </main>
+  </div>
+  <div class="toast-region" aria-live="polite" aria-atomic="true"></div>
+  <script src="/app.js" defer></script>
+</body>
+</html>
